@@ -11,6 +11,7 @@ const StyledDiv = styled.div`
   align-items: center;
   width: 100vw;
   height: 4rem;
+  z-index: 99;
 `;
 
 const NavBar = ({ windowWidth, navLinks, handleMobileNav }) => {

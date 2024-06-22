@@ -43,6 +43,7 @@ function App() {
         navLinks={navLinks}
         socialLinks={socialLinks}
         isMobileNavOpen={isMobileNavOpen}
+        handleMobileNav={handleMobileNav}
       />
     </StyledMain>
   );
