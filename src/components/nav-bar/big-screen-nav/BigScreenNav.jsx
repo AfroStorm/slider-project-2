@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   padding: 0.5rem 2rem 0.5rem 0.5rem;
   height: 100%;
   background: var(--secondary);
-  transform: skewX(5deg) translateX(1rem);
+  transform: skewX(-10deg) translateX(1rem);
   border-radius: 0.1rem;
   box-shadow: var(--light-shadow);
 `;

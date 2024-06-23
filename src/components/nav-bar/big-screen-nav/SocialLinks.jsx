@@ -33,6 +33,7 @@ const StyledUl = styled.ul`
     font-size: 1.5rem;
     color: var(--accent-1);
     cursor: pointer;
+    transition: 0.3s ease;
   }
 
   & .icon:hover,

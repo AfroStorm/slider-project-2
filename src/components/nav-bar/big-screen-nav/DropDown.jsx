@@ -6,11 +6,8 @@ const StyledDiv = styled.div`
   & .icon {
     font-size: 1.5rem;
     color: var(--accent-1);
-  }
+    transition: 0.3s ease;
 
-  & .icon {
-    font-size: 1.5rem;
-    color: var(--accent-1);
     ${({ $isHovering }) =>
       $isHovering &&
       `

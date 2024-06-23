@@ -15,6 +15,7 @@ const StyledUl = styled.ul`
     font-size: 1.1rem;
     color: var(--accent-1);
     cursor: pointer;
+    transition: 0.3s ease;
   }
 
   & .page-link button:hover,

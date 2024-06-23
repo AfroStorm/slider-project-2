@@ -30,6 +30,7 @@ const StyledLi = styled.li`
     font-size: 1.8rem;
     color: var(--accent-1);
     cursor: pointer;
+    transition: 0.3s ease;
   }
 
   & button:hover,

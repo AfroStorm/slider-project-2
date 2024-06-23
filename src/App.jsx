@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import pageLinks from "./appData/navLinks";
 import socialLinks from "./appData/socialMediaLinks";
 import MobileNav from "./components/nav-bar/mobile-nav/MobileNav";
+import Home from "./components/home-section/Home";
+import About from "./components/about/About";
 
 const StyledMain = styled.main`
+  position: relative;
   width: 100vw;
 `;
 function App() {
@@ -45,6 +48,8 @@ function App() {
         isMobileNavOpen={isMobileNavOpen}
         handleMobileNav={handleMobileNav}
       />
+      <Home />
+      <About />
     </StyledMain>
   );
 }

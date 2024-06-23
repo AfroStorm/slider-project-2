@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
   padding: 0.5rem;
   padding-top: 0.4rem;
   background: var(--secondary);
-  transform: skewX(5deg) translateX(0.5rem);
+  transform: skewX(-10deg) translateX(0.5rem);
   box-shadow: var(--light-shadow);
 
   & .lines {
@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
     align-items: center;
     gap: 0.4rem;
     width: 95%;
-    transform: skewX(-5deg);
+    transform: skewX(10deg);
     background: transparent;
     border: none;
   }

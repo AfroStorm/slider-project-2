@@ -27,6 +27,7 @@ const StyledUl = styled.ul`
   & .icon {
     font-size: 2.5rem;
     color: var(--accent-1);
+    transition: 0.3s ease;
   }
 
   & .icon:hover,
