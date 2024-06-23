@@ -22,8 +22,8 @@ const BigScreenNav = ({ pageLinks, socialLinks }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleHovering = () => {
-    setIsHovering(!isHovering);
+  const handleHovering = (boolean) => {
+    setIsHovering(boolean);
   };
 
   const handleSocialLinks = (command) => {
@@ -41,7 +41,6 @@ const BigScreenNav = ({ pageLinks, socialLinks }) => {
         socialLinks={socialLinks}
         isOpen={isOpen}
         handleSocialLinks={handleSocialLinks}
-        handleHovering={handleHovering}
       />
       <PageLinks pageLinks={pageLinks} />
     </StyledDiv>

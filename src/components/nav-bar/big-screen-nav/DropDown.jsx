@@ -27,8 +27,9 @@ const DropDown = ({ handleSocialLinks, handleHovering, isHovering }) => {
     <StyledDiv
       $isHovering={isHovering}
       onMouseEnter={() => {
-        handleSocialLinks("open"), handleHovering();
+        handleSocialLinks("open"), handleHovering(true);
       }}
+      onMouseLeave={() => handleHovering(false)}
     >
       <IoShareSocial className="icon" />
       <IoMdArrowDropdown className="icon" />

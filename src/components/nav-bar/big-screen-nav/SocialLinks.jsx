@@ -45,14 +45,14 @@ const StyledUl = styled.ul`
 const SocialLinks = ({
   socialLinks,
   handleSocialLinks,
-  handleHovering,
+
   isOpen,
 }) => {
   return (
     <StyledUl
       $isOpen={isOpen}
       onMouseLeave={() => {
-        handleSocialLinks("close"), handleHovering();
+        handleSocialLinks("close");
       }}
     >
       {socialLinks.map((socialLink) => {
