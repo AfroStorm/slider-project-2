@@ -39,10 +39,10 @@ const StyledLi = styled.li`
   }
 `;
 
-const PageLinks = ({ navLinks, isMobileNavOpen }) => {
+const PageLinks = ({ pageLinks, isMobileNavOpen }) => {
   return (
     <StyledUl>
-      {navLinks.map((pageLink, index) => {
+      {pageLinks.map((pageLink, index) => {
         const { id, name } = pageLink;
         return (
           <StyledLi key={id} $index={index} $isMobileNavOpen={isMobileNavOpen}>

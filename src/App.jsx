@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import NavBar from "./components/nav-bar/NavBar";
 import { useEffect, useState } from "react";
-import navLinks from "./appData/navLinks";
+import pageLinks from "./appData/navLinks";
 import socialLinks from "./appData/socialMediaLinks";
 import MobileNav from "./components/nav-bar/mobile-nav/MobileNav";
 
@@ -35,12 +35,12 @@ function App() {
     <StyledMain>
       <NavBar
         windowWidth={windowWidth}
-        navLinks={navLinks}
+        pageLinks={pageLinks}
         socialLinks={socialLinks}
         handleMobileNav={handleMobileNav}
       />
       <MobileNav
-        navLinks={navLinks}
+        pageLinks={pageLinks}
         socialLinks={socialLinks}
         isMobileNavOpen={isMobileNavOpen}
         handleMobileNav={handleMobileNav}

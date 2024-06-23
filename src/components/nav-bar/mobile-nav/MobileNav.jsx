@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
 `;
 
 const MobileNav = ({
-  navLinks,
+  pageLinks,
   socialLinks,
   isMobileNavOpen,
   handleMobileNav,
@@ -35,7 +35,7 @@ const MobileNav = ({
         isBackDropOpen={isBackDropOpen}
       />
       <StyledDiv $isMobileNavOpen={isMobileNavOpen}>
-        <PageLinks navLinks={navLinks} isMobileNavOpen={isMobileNavOpen} />
+        <PageLinks pageLinks={pageLinks} isMobileNavOpen={isMobileNavOpen} />
         <SocialLinks
           socialLinks={socialLinks}
           isMobileNavOpen={isMobileNavOpen}

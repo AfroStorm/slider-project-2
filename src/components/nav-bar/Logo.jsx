@@ -6,8 +6,8 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.9rem 0.5rem 0.7rem 1.5rem;
-  /* padding-left: 1.5rem; */
+  border-radius: 0.1rem;
+  padding: 0.9rem 0.5rem 0.7rem 2rem;
   height: 100%;
   background: var(--secondary);
   transform: skewX(5deg) translateX(-1rem);
