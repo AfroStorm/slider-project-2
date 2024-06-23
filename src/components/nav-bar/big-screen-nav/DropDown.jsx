@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { IoShareSocial } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
