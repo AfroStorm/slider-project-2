@@ -6,6 +6,13 @@ const StyledUl = styled.ul`
   align-items: center;
   gap: 1rem;
   width: 100%;
+  ${({ $isMobileNavOpen }) =>
+    `
+  transform: ${$isMobileNavOpen ? "translateY(0%)" : "translateY(100%)"};
+  opacity:${$isMobileNavOpen ? "1" : "0"};
+  transition:${$isMobileNavOpen ? "0.6s ease" : "none"};
+  transition-delay: 0.6s;
+`}
 
   & .icon {
     font-size: 2.5rem;
@@ -13,9 +20,9 @@ const StyledUl = styled.ul`
   }
 `;
 
-const SocialLinks = ({ socialLinks }) => {
+const SocialLinks = ({ socialLinks, isMobileNavOpen }) => {
   return (
-    <StyledUl>
+    <StyledUl $isMobileNavOpen={isMobileNavOpen}>
       {socialLinks.map((socialLink) => {
         const { id, link, Icon } = socialLink;
         return (

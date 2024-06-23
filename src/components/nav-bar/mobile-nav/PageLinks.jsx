@@ -7,8 +7,18 @@ const StyledUl = styled.ul`
   align-items: center;
   gap: 1rem;
   width: 100%;
+`;
 
-  & .page-link button {
+const StyledLi = styled.li`
+  ${({ $isMobileNavOpen, $index }) =>
+    `
+  transform: ${$isMobileNavOpen ? "translateY(0%)" : "translateY(100%)"};
+  opacity:${$isMobileNavOpen ? "1" : "0"};
+  transition:${$isMobileNavOpen ? "0.6s ease" : "none"};
+  transition-delay: ${($index + 1) * 0.1}s;
+`}
+
+  & button {
     border: none;
     background: transparent;
     font-weight: 900;
@@ -17,15 +27,15 @@ const StyledUl = styled.ul`
   }
 `;
 
-const PageLinks = ({ navLinks }) => {
+const PageLinks = ({ navLinks, isMobileNavOpen }) => {
   return (
     <StyledUl>
-      {navLinks.map((pageLink) => {
+      {navLinks.map((pageLink, index) => {
         const { id, name } = pageLink;
         return (
-          <li key={id} className="page-link">
+          <StyledLi key={id} $index={index} $isMobileNavOpen={isMobileNavOpen}>
             <button type="button">{name}</button>
-          </li>
+          </StyledLi>
         );
       })}
     </StyledUl>
