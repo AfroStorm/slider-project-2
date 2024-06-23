@@ -20,6 +20,11 @@ const StyledDiv = styled.div`
     background: transparent;
     border: none;
   }
+
+  & .lines:active {
+    scale: 1.1;
+  }
+
   & .line {
     width: 80%;
     padding: 0.3rem;
