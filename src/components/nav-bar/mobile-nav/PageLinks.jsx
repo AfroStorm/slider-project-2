@@ -11,19 +11,31 @@ const StyledUl = styled.ul`
 
 const StyledLi = styled.li`
   ${({ $isMobileNavOpen, $index }) =>
-    `
-  transform: ${$isMobileNavOpen ? "translateY(0%)" : "translateY(100%)"};
-  opacity:${$isMobileNavOpen ? "1" : "0"};
-  transition:${$isMobileNavOpen ? "0.6s ease" : "none"};
+    $isMobileNavOpen
+      ? `
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.6s ease;
   transition-delay: ${($index + 1) * 0.1}s;
+  `
+      : `
+  transform: translateY(100%);
+  opacity: 0;
+  transition: none;
 `}
-
   & button {
     border: none;
     background: transparent;
     font-weight: 900;
     font-size: 1.8rem;
     color: var(--accent-1);
+    cursor: pointer;
+  }
+
+  & button:hover,
+  button:active {
+    color: var(--primary);
+    scale: 1.1;
   }
 `;
 

@@ -7,16 +7,32 @@ const StyledUl = styled.ul`
   gap: 1rem;
   width: 100%;
   ${({ $isMobileNavOpen }) =>
-    `
-  transform: ${$isMobileNavOpen ? "translateY(0%)" : "translateY(100%)"};
-  opacity:${$isMobileNavOpen ? "1" : "0"};
-  transition:${$isMobileNavOpen ? "0.6s ease" : "none"};
+    $isMobileNavOpen
+      ? `
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.6s ease;
   transition-delay: 0.6s;
+  `
+      : `
+  transform: translateY(100%);
+  opacity: 0;
+  transition: none;
 `}
+
+  & .social-link a {
+    cursor: pointer;
+  }
 
   & .icon {
     font-size: 2.5rem;
     color: var(--accent-1);
+  }
+
+  & .icon:hover,
+  .icon:active {
+    color: var(--primary);
+    scale: 1.1;
   }
 `;
 
