@@ -7,22 +7,23 @@ const StyledDiv = styled.div`
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.1rem;
-  padding: 0.9rem 0.5rem 0.7rem 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   height: 100%;
   background: var(--secondary);
   transform: skewX(5deg) translateX(-1rem);
   box-shadow: var(--light-shadow);
 
   & .img-container {
+    height: 100%;
     transform: skewX(-5deg);
   }
   & .logo {
-    width: 50px;
-    height: 50px;
+    height: 100%;
   }
 
   & .brand-name {
     transform: skewX(-5deg);
+    font-size: 1.4rem;
     font-weight: 900;
     color: var(--accent-1);
   }

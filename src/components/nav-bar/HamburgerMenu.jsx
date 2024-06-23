@@ -4,7 +4,7 @@ const StyledDiv = styled.div`
   width: 6.5rem;
   height: 100%;
   padding: 0.5rem;
-  padding-top: 0.7rem;
+  padding-top: 0.4rem;
   background: var(--secondary);
   transform: skewX(5deg) translateX(0.5rem);
   box-shadow: var(--light-shadow);

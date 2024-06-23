@@ -4,7 +4,7 @@ const StyledUl = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   height: 100%;
   transform: skewX(-5deg);
 
@@ -12,7 +12,7 @@ const StyledUl = styled.ul`
     border: none;
     background: transparent;
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--accent-1);
     cursor: pointer;
   }

@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   }
 
   & .icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--accent-1);
     ${({ $isHovering }) =>
       $isHovering &&

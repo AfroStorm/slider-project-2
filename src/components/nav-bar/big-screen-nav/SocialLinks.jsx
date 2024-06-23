@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledUl = styled.ul`
   position: absolute;
   left: 0;
-  top: 3.9rem;
+  top: 3.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@ const StyledUl = styled.ul`
       `}
 
   & .icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--accent-1);
     cursor: pointer;
   }
