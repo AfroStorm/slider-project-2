@@ -8,8 +8,7 @@ const StyledDiv = styled.div`
   gap: 1rem;
 
   & .name {
-    color: var(--secondary);
-    font-weight: 900;
+    font-weight: 500;
   }
 
   & .image {
@@ -33,8 +32,8 @@ const StyledDiv = styled.div`
 const Description = ({ name, image, description }) => {
   return (
     <StyledDiv>
-      <h3 className="name">{name}</h3>
       <img src={image} alt={name} className="image" />
+      <h4 className="name">{name}</h4>
       <p className="description">{description}</p>
     </StyledDiv>
   );

@@ -11,6 +11,13 @@ const StyledSection = styled.section`
   flex-direction: column;
   gap: 3rem;
 
+  & .header .title {
+    color: var(--secondary);
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
   & .service-container {
     display: flex;
     flex-direction: column;
@@ -24,6 +31,10 @@ const StyledSection = styled.section`
 const Service = () => {
   return (
     <StyledSection>
+      <div className="header">
+        <h4 className="title">what we offer</h4>
+      </div>
+
       {serviceData.map((service) => {
         const { id, name, description, image, features } = service;
         return (

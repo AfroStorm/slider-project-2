@@ -8,6 +8,7 @@ import Home from "./components/home-section/Home";
 import About from "./components/about-section/About";
 import Service from "./components/service-section/Service";
 import WhyUs from "./components/why-us-section/WhyUs";
+import Reviews from "./components/reviews-section/Reviews";
 
 const StyledMain = styled.main`
   display: flex;
@@ -59,6 +60,7 @@ function App() {
       <About />
       <Service />
       <WhyUs />
+      <Reviews />
     </StyledMain>
   );
 }
