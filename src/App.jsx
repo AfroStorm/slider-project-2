@@ -6,7 +6,8 @@ import socialLinks from "./appData/socialMediaLinks";
 import MobileNav from "./components/nav-bar/mobile-nav/MobileNav";
 import Home from "./components/home-section/Home";
 import About from "./components/about-section/About";
-import Service from "./components/service/Service";
+import Service from "./components/service-section/Service";
+import WhyUs from "./components/why-us-section/WhyUs";
 
 const StyledMain = styled.main`
   display: flex;
@@ -57,6 +58,7 @@ function App() {
       <Home />
       <About />
       <Service />
+      <WhyUs />
     </StyledMain>
   );
 }
