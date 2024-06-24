@@ -5,9 +5,15 @@ import pageLinks from "./appData/navLinks";
 import socialLinks from "./appData/socialMediaLinks";
 import MobileNav from "./components/nav-bar/mobile-nav/MobileNav";
 import Home from "./components/home-section/Home";
-import About from "./components/about/About";
+import About from "./components/about-section/About";
+import Service from "./components/service/Service";
 
 const StyledMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   position: relative;
   width: 100vw;
 `;
@@ -50,6 +56,7 @@ function App() {
       />
       <Home />
       <About />
+      <Service />
     </StyledMain>
   );
 }

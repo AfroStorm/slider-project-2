@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 `;
 
 const Home = () => {
