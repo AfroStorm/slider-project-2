@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import CatchPhrase from "./CatchPhrase";
 import CallToAction from "./CallToAction";
+import { forwardRef } from "react";
 
 const StyledSection = styled.section`
   display: flex;
@@ -11,12 +12,12 @@ const StyledSection = styled.section`
   width: 100%;
 `;
 
-const Home = () => {
+const Home = forwardRef(({}, ref) => {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <CatchPhrase />
       <CallToAction />
     </StyledSection>
   );
-};
+});
 export default Home;

@@ -37,14 +37,14 @@ const StyledUl = styled.ul`
   }
 `;
 
-const SocialLinks = ({ socialLinks, isMobileNavOpen }) => {
+const SocialLinks = ({ socialLinks, isMobileNavOpen, handleMobileNav }) => {
   return (
     <StyledUl $isMobileNavOpen={isMobileNavOpen}>
       {socialLinks.map((socialLink) => {
         const { id, link, Icon } = socialLink;
         return (
           <li key={id} className="social-link">
-            <a href={link}>
+            <a href={link} onClick={() => handleMobileNav()}>
               <Icon className={"icon"} />
             </a>
           </li>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { whyUsImage } from "../../appData/whyUs";
 import whyUsData from "../../appData/whyUs";
 import Description from "./Description";
+import { forwardRef } from "react";
 
 const StyledSection = styled.section`
   width: 90vw;
@@ -27,13 +28,13 @@ const StyledSection = styled.section`
   }
 `;
 
-const WhyUs = () => {
+const WhyUs = forwardRef(({}, ref) => {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <h3 className="title">why halal haven ?</h3>
       <img src={whyUsImage} alt="image" className="image" />
       <Description whyUsData={whyUsData} />
     </StyledSection>
   );
-};
+});
 export default WhyUs;

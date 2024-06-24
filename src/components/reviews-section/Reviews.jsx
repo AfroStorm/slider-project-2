@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import reviewData from "../../appData/reviews";
 import CustomerSlider from "./CustomerSlider";
+import { forwardRef } from "react";
 
 const StyledSection = styled.section`
   width: 100vw;
@@ -27,9 +28,9 @@ const StyledSection = styled.section`
   }
 `;
 
-const Reviews = () => {
+const Reviews = forwardRef(({}, ref) => {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <div className="header">
         <p>don't just take our word for it...</p>
         <h4 className="title">What our clients are saying</h4>
@@ -37,5 +38,5 @@ const Reviews = () => {
       <CustomerSlider reviewData={reviewData} />
     </StyledSection>
   );
-};
+});
 export default Reviews;

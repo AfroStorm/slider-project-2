@@ -22,9 +22,9 @@ const StyledDiv = styled.div`
 
   & .description {
     text-align: justify;
-    padding: 0.5rem;
     font-size: 1.2rem;
     font-weight: 500;
+    padding: 0.5rem;
     line-height: 2;
   }
 `;

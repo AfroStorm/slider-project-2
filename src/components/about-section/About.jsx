@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import halalLogo from "../../assets/halal.png";
 import Info from "./Info";
+import { forwardRef } from "react";
 
 const StyledSection = styled.section`
   display: flex;
@@ -22,14 +23,14 @@ const StyledSection = styled.section`
   }
 `;
 
-const About = () => {
+const About = forwardRef(({}, ref) => {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <div className="image-container">
         <img src={halalLogo} alt="halal-logo" className="certificate" />
       </div>
       <Info />
     </StyledSection>
   );
-};
+});
 export default About;

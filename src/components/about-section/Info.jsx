@@ -2,7 +2,7 @@ import styled from "styled-components";
 const companyName = "The Company";
 
 const StyledDiv = styled.div`
-  padding: 0.5rem;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@ const StyledDiv = styled.div`
 const Info = () => {
   return (
     <StyledDiv>
-      <h3>what is {companyName} ?</h3>
+      <h3>about {companyName}</h3>
       <p>
         Welcome to {companyName}, where tradition meets quality. We provide
         high-quality products that seamlessly fit into your everyday life while

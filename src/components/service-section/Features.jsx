@@ -8,6 +8,7 @@ const StyledUl = styled.ul`
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
+  padding: 0.5rem;
 
   & .feature {
     display: flex;

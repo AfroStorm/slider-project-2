@@ -37,6 +37,7 @@ const StyledLi = styled.li`
   & .review-text {
     text-align: justify;
     font-size: 1.2rem;
+    padding: 0.5rem;
     font-weight: 500;
     line-height: 2;
   }
@@ -46,6 +47,7 @@ const StyledLi = styled.li`
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem;
     width: 100%;
   }
 `;

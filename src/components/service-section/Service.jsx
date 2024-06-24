@@ -2,6 +2,7 @@ import styled from "styled-components";
 import serviceData from "../../appData/services";
 import Description from "./Description";
 import Features from "./Features";
+import { forwardRef } from "react";
 
 const StyledSection = styled.section`
   width: 100vw;
@@ -28,9 +29,9 @@ const StyledSection = styled.section`
   }
 `;
 
-const Service = () => {
+const Service = forwardRef(({}, ref) => {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <div className="header">
         <h4 className="title">what we offer</h4>
       </div>
@@ -46,5 +47,5 @@ const Service = () => {
       })}
     </StyledSection>
   );
-};
+});
 export default Service;
