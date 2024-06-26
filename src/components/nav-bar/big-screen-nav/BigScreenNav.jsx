@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
   height: 100%;
   background: var(--secondary);
   transform: skewX(-10deg) translateX(1rem);

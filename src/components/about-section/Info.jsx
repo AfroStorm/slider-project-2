@@ -23,6 +23,7 @@ const StyledDiv = styled.div`
     padding: 0.5rem;
     font-size: 1.2rem;
     line-height: 2;
+    color: var(--text-1);
   }
 `;
 

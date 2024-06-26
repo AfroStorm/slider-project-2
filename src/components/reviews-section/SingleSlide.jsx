@@ -40,6 +40,7 @@ const StyledLi = styled.li`
     padding: 0.5rem;
     font-weight: 500;
     line-height: 2;
+    color: var(--text-1);
   }
 
   & .user-info {
@@ -49,6 +50,12 @@ const StyledLi = styled.li`
     gap: 1rem;
     padding: 0.5rem;
     width: 100%;
+  }
+
+  & .age,
+  .name {
+    font-weight: 500;
+    color: var(--text-2);
   }
 `;
 
@@ -69,7 +76,7 @@ const SingleSlide = ({ image, userName, age, numOfStars, reviewText }) => {
 
       <div className="user-info">
         <h4 className="name">{userName}</h4>
-        <h5>{age}</h5>
+        <h4 className="age">{age}</h4>
       </div>
     </StyledLi>
   );

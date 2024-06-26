@@ -33,7 +33,7 @@ const Service = forwardRef(({}, ref) => {
   return (
     <StyledSection ref={ref}>
       <div className="header">
-        <h4 className="title">what we offer</h4>
+        <h4 className="title">our services for you</h4>
       </div>
 
       {serviceData.map((service) => {

@@ -9,8 +9,8 @@ const StyledUl = styled.ul`
   width: 100%;
 
   & .name {
-    /* color: var(--accent-3); */
-    font-weight: 500;
+    color: var(--text-2);
+    font-weight: 900;
     text-align: center;
   }
 

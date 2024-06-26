@@ -4,7 +4,7 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
   width: 100%;
   height: 10rem;
@@ -16,15 +16,15 @@ const StyledDiv = styled.div`
 
   & h1,
   & p {
-    margin-left: 1.5rem;
     font-weight: 900;
+    color: var(--primary);
   }
 
   & h1 {
     font-size: 2.2rem;
   }
   & span {
-    color: var(--secondary);
+    color: var(--accent-1);
   }
 `;
 

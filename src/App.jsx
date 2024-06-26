@@ -28,7 +28,7 @@ function App() {
   const whyUsSectionRef = useRef(null);
   const reviewsSectionRef = useRef(null);
 
-  // Mobile nav handling
+  // Mobile nav section scrolling
   const scrollToSection = (sectionId) => {
     let sectionRef;
     switch (sectionId) {
@@ -84,6 +84,7 @@ function App() {
         socialLinks={socialLinks}
         handleMobileNav={handleMobileNav}
       />
+
       <MobileNav
         pageLinks={pageLinks}
         socialLinks={socialLinks}
@@ -91,6 +92,7 @@ function App() {
         handleMobileNav={handleMobileNav}
         scrollToSection={scrollToSection}
       />
+
       <Home ref={homeSectionRef} />
       <About ref={aboutSectionRef} />
       <Service ref={serviceSectionRef} />

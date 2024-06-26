@@ -8,7 +8,8 @@ const StyledDiv = styled.div`
   gap: 1rem;
 
   & .name {
-    font-weight: 500;
+    font-weight: 900;
+    color: var(--text-2);
   }
 
   & .image {
@@ -26,6 +27,7 @@ const StyledDiv = styled.div`
     font-weight: 500;
     padding: 0.5rem;
     line-height: 2;
+    color: var(--text-1);
   }
 `;
 
