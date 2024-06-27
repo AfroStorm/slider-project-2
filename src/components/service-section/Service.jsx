@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import serviceData from "../../appData/services";
-import Description from "./Description";
 import Features from "./Features";
 import { forwardRef } from "react";
 
@@ -30,14 +29,6 @@ const StyledSection = styled.section`
     font-size: 1.8rem;
   }
 
-  & .service-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
   @media screen and (min-width: 992px) {
     position: absolute;
     top: 0;
@@ -51,12 +42,9 @@ const StyledSection = styled.section`
 
     .content-container {
       margin-top: 3rem;
-      max-width: 50rem;
-      height: 100vh;
       align-items: flex-start;
-    }
-    .service-container {
       flex-direction: row;
+      gap: 0;
     }
 
     & .header .title {
@@ -74,16 +62,9 @@ const Service = forwardRef(({ currentPage, pageIndex }, ref) => {
         </div>
 
         {serviceData.map((service) => {
-          const { id, name, description, image, features } = service;
+          const { id, name, image, features } = service;
           return (
-            <div key={id} className="service-container">
-              <Description
-                name={name}
-                image={image}
-                description={description}
-              />
-              <Features features={features} />
-            </div>
+            <Features key={id} features={features} name={name} image={image} />
           );
         })}
       </div>

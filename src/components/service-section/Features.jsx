@@ -10,6 +10,20 @@ const StyledUl = styled.ul`
   gap: 1rem;
   padding: 0.5rem;
 
+  & .name {
+    font-weight: 900;
+    color: var(--text-2);
+  }
+
+  & .image {
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+    box-shadow: var(--light-shadow);
+  }
+
   & .feature {
     display: flex;
     justify-content: center;
@@ -31,6 +45,15 @@ const StyledUl = styled.ul`
   }
 
   @media screen and (min-width: 992px) {
+    align-items: center;
+
+    .image {
+      width: 21rem;
+      height: 16rem;
+    }
+    .feature {
+      align-self: flex-start;
+    }
     .icon {
       font-size: 1.2rem;
     }
@@ -40,9 +63,12 @@ const StyledUl = styled.ul`
   }
 `;
 
-const Features = ({ features }) => {
+const Features = ({ features, name, image }) => {
   return (
     <StyledUl>
+      <img src={image} alt={name} className="image" />
+      <h4 className="name">{name}</h4>
+
       {features.map((feature) => {
         return (
           <li key={uuid4()} className="feature">
