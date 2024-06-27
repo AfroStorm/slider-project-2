@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90vw;
 
   & .image-container {
     width: 12rem;

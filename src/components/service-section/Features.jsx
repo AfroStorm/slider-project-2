@@ -20,14 +20,14 @@ const StyledUl = styled.ul`
   & .icon {
     flex: 0.5;
     font-size: 1.5rem;
-    color: var(--secondary-2);
+    color: var(--accent-1);
   }
 
   & .feature-text {
     font-size: 1.2rem;
     font-weight: 900;
     flex: 10;
-    color: var(--secondary-2);
+    color: var(--accent-1);
   }
 `;
 

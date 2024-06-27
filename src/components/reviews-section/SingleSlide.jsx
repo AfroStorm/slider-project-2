@@ -40,7 +40,7 @@ const StyledLi = styled.li`
     padding: 0.5rem;
     font-weight: 500;
     line-height: 2;
-    color: var(--text-1);
+    color: white;
   }
 
   & .user-info {
@@ -55,7 +55,7 @@ const StyledLi = styled.li`
   & .age,
   .name {
     font-weight: 500;
-    color: var(--text-2);
+    color: var(--accent-1);
   }
 `;
 

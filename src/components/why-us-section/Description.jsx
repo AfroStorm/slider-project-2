@@ -8,8 +8,18 @@ const StyledUl = styled.ul`
   gap: 1rem;
   width: 100%;
 
+  & .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--secondary-2);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+
   & .name {
-    color: var(--text-2);
+    color: var(--secondary);
     font-weight: 900;
     text-align: center;
   }

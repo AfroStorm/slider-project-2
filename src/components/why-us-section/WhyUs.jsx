@@ -5,13 +5,23 @@ import Description from "./Description";
 import { forwardRef } from "react";
 
 const StyledSection = styled.section`
-  width: 90vw;
+  position: relative;
+  width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+
+  & .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90vw;
+  }
 
   & .image {
     width: 100%;
@@ -23,7 +33,7 @@ const StyledSection = styled.section`
   }
 
   & .title {
-    color: var(--secondary);
+    text-align: center;
     font-weight: 900;
   }
 `;
@@ -31,9 +41,13 @@ const StyledSection = styled.section`
 const WhyUs = forwardRef(({}, ref) => {
   return (
     <StyledSection ref={ref}>
-      <h3 className="title">why halal haven ?</h3>
-      <img src={whyUsImage} alt="image" className="image" />
-      <Description whyUsData={whyUsData} />
+      <div className="content-container">
+        <h3 className="title">
+          4 reasons <br /> to choose us
+        </h3>
+        <img src={whyUsImage} alt="image" className="image" />
+        <Description whyUsData={whyUsData} />
+      </div>
     </StyledSection>
   );
 });

@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from "uuid";
-import islamicStudyImg from "../assets/learning.jpg";
+import islamicStudyImg from "../assets/quran.jpg";
 import muslimFamily from "../assets/smiling-family.jpg";
 const companyName = "Halal Haven";
 
