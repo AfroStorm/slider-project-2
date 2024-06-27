@@ -29,6 +29,15 @@ const StyledUl = styled.ul`
     flex: 10;
     color: var(--secondary);
   }
+
+  @media screen and (min-width: 992px) {
+    .icon {
+      font-size: 1.2rem;
+    }
+    .feature-text {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const Features = ({ features }) => {

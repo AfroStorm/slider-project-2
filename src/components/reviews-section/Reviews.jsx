@@ -14,6 +14,18 @@ const StyledSection = styled.section`
   gap: 2rem;
   padding-top: 3rem;
 
+  @media screen and (min-width: 992px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    ${({ $currentPage, $pageIndex }) => `
+    transform: translateX(${100 * ($pageIndex - $currentPage)}%);
+    opacity: ${$pageIndex === $currentPage ? 1 : 0};
+    visibility: ${$pageIndex === $currentPage ? "visible" : "hidden"};
+    `}
+  }
+
   & .header p,
   .title {
     color: var(--secondary);
@@ -30,9 +42,9 @@ const StyledSection = styled.section`
   }
 `;
 
-const Reviews = forwardRef(({}, ref) => {
+const Reviews = forwardRef(({ currentPage, pageIndex }, ref) => {
   return (
-    <StyledSection ref={ref}>
+    <StyledSection ref={ref} $currentPage={currentPage} $pageIndex={pageIndex}>
       <div className="header">
         <p>don't just take our word for it...</p>
         <h4 className="title">What our clients are saying</h4>

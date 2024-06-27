@@ -23,11 +23,21 @@ const StyledDiv = styled.div`
 
   & .description {
     text-align: justify;
+    max-width: 40rem;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 0.5rem;
     line-height: 2;
     color: var(--text-1);
+  }
+
+  @media screen and (min-width: 992px) {
+    .image {
+      max-width: 15rem;
+    }
+    .description {
+      font-size: 1rem;
+    }
   }
 `;
 

@@ -10,17 +10,29 @@ const StyledDiv = styled.div`
   height: 10rem;
   margin-bottom: 7rem;
 
-  & p {
+  @media screen and (min-width: 992px) {
+    align-items: flex-start;
+    margin-left: 17rem;
+
+    .main-text {
+      font-size: 3.046rem;
+    }
+    .lower-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  & .lower-text {
     font-size: 1.3rem;
   }
 
-  & h1,
-  & p {
+  & .main-text,
+  & .lower-text {
     font-weight: 900;
     color: var(--primary);
   }
 
-  & h1 {
+  & .main-text {
     font-size: 2.2rem;
   }
   & span {
@@ -31,10 +43,10 @@ const StyledDiv = styled.div`
 const CatchPhrase = () => {
   return (
     <StyledDiv>
-      <h1>
+      <h1 className="main-text">
         Crafted with Care <br /> Rooted in <span>Faith</span>.
       </h1>
-      <p>Where Quality Meets Devotion.</p>
+      <p className="lower-text">Where Quality Meets Devotion.</p>
     </StyledDiv>
   );
 };

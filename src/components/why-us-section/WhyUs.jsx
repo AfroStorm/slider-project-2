@@ -14,6 +14,18 @@ const StyledSection = styled.section`
   flex-direction: column;
   gap: 2rem;
 
+  @media screen and (min-width: 992px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    ${({ $currentPage, $pageIndex }) => `
+    transform: translateX(${100 * ($pageIndex - $currentPage)}%);
+    opacity: ${$pageIndex === $currentPage ? 1 : 0};
+    visibility: ${$pageIndex === $currentPage ? "visible" : "hidden"};
+    `}
+  }
+
   & .content-container {
     display: flex;
     justify-content: center;
@@ -38,9 +50,9 @@ const StyledSection = styled.section`
   }
 `;
 
-const WhyUs = forwardRef(({}, ref) => {
+const WhyUs = forwardRef(({ currentPage, pageIndex }, ref) => {
   return (
-    <StyledSection ref={ref}>
+    <StyledSection ref={ref} $currentPage={currentPage} $pageIndex={pageIndex}>
       <div className="content-container">
         <h3 className="title">
           4 reasons <br /> to choose us

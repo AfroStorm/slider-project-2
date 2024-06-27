@@ -8,17 +8,15 @@ const StyledDiv = styled.div`
   align-items: center;
   gap: 1rem;
 
-  & h4,
-  p {
-    font-weight: 500;
-  }
-  & h3 {
+  & .title {
     color: var(--secondary);
     font-weight: 900;
   }
 
-  & p {
+  & .info-text {
     text-align: justify;
+    max-width: 40rem;
+    font-weight: 500;
     padding: 0.5rem;
     font-size: 1.2rem;
     line-height: 2;
@@ -29,8 +27,8 @@ const StyledDiv = styled.div`
 const Info = () => {
   return (
     <StyledDiv>
-      <h3>about {companyName}</h3>
-      <p>
+      <h3 className="title">about {companyName}</h3>
+      <p className="info-text">
         Welcome to {companyName}, where tradition meets quality. We provide
         high-quality products that seamlessly fit into your everyday life while
         adhering to Islamic principles. Our diverse range includes stylish

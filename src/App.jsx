@@ -11,17 +11,19 @@ import WhyUs from "./components/why-us-section/WhyUs";
 import Reviews from "./components/reviews-section/Reviews";
 
 const StyledMain = styled.main`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  position: relative;
   width: 100vw;
 `;
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [currentPage, setCurrentPge] = useState(0);
+
   const homeSectionRef = useRef(null);
   const aboutSectionRef = useRef(null);
   const serviceSectionRef = useRef(null);
@@ -93,11 +95,19 @@ function App() {
         scrollToSection={scrollToSection}
       />
 
-      <Home ref={homeSectionRef} />
-      <About ref={aboutSectionRef} />
-      <Service ref={serviceSectionRef} />
-      <WhyUs ref={whyUsSectionRef} />
-      <Reviews ref={reviewsSectionRef} />
+      {/* <Home ref={homeSectionRef} currentPage={currentPage} pageIndex={0} /> */}
+      {/* <About ref={aboutSectionRef} currentPage={currentPage} pageIndex={1} /> */}
+      <Service
+        ref={serviceSectionRef}
+        currentPage={currentPage}
+        pageIndex={0}
+      />
+      {/* <WhyUs ref={whyUsSectionRef} currentPage={currentPage} pageIndex={3} /> */}
+      {/* <Reviews
+        ref={reviewsSectionRef}
+        currentPage={currentPage}
+        pageIndex={4}
+      /> */}
     </StyledMain>
   );
 }

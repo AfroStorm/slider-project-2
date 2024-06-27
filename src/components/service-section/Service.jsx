@@ -14,16 +14,6 @@ const StyledSection = styled.section`
   gap: 3rem;
   padding: 3rem 0;
 
-  /* & .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--accent-1);
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-  } */
-
   & .content-container {
     display: flex;
     justify-content: center;
@@ -32,6 +22,7 @@ const StyledSection = styled.section`
     width: 90vw;
     gap: 3rem;
   }
+
   & .header .title {
     color: var(--secondary);
     font-weight: 900;
@@ -46,13 +37,37 @@ const StyledSection = styled.section`
     align-items: center;
     gap: 1rem;
   }
+
+  @media screen and (min-width: 992px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    ${({ $currentPage, $pageIndex }) => `
+    transform: translateX(${100 * ($pageIndex - $currentPage)}%);
+    opacity: ${$pageIndex === $currentPage ? 1 : 0};
+    visibility: ${$pageIndex === $currentPage ? "visible" : "hidden"};
+    `}
+
+    .content-container {
+      margin-top: 3rem;
+      max-width: 50rem;
+      height: 100vh;
+      align-items: flex-start;
+    }
+    .service-container {
+      flex-direction: row;
+    }
+
+    & .header .title {
+      display: none;
+    }
+  }
 `;
 
-const Service = forwardRef(({}, ref) => {
+const Service = forwardRef(({ currentPage, pageIndex }, ref) => {
   return (
-    <StyledSection ref={ref}>
-      {/* <div className="background-image"></div> */}
-
+    <StyledSection ref={ref} $currentPage={currentPage} $pageIndex={pageIndex}>
       <div className="content-container">
         <div className="header">
           <h4 className="title">our services for you</h4>
