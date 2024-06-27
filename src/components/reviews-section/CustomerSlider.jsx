@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import SingleSlide from "./SingleSlide";
+import { useState } from "react";
 
 const StyledUl = styled.ul`
   position: relative;
@@ -15,7 +16,7 @@ const StyledUl = styled.ul`
 
   & .arrow-btn {
     position: absolute;
-    top: 4.3rem;
+    top: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,28 +34,44 @@ const StyledUl = styled.ul`
 
   & .arrow-icon {
     font-size: 2rem;
-    color: var(--secondary);
+    color: var(--accent-1);
   }
 `;
 
 const CustomerSlider = ({ reviewData }) => {
+  const [currentPerson, setCurrentPerson] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentPerson((oldPerson) => {
+      const result = (oldPerson - 1 + reviewData.length) % reviewData.length;
+      return result;
+    });
+  };
+  const nextSlide = () => {
+    setCurrentPerson((oldPerson) => {
+      const result = (oldPerson + 1) % reviewData.length;
+      return result;
+    });
+  };
+
   return (
     <StyledUl>
       <button className="arrow-btn left-btn">
-        <MdArrowBackIosNew
-          className="arrow-icon"
-          //   onClick={() => handleCustomerSlide("prev")}
-        />
+        <MdArrowBackIosNew className="arrow-icon" onClick={prevSlide} />
       </button>
       <button className="arrow-btn right-btn">
-        <MdArrowForwardIos
-          className="arrow-icon"
-          //   onClick={() => handleCustomerSlide("next")}
-        />
+        <MdArrowForwardIos className="arrow-icon" onClick={nextSlide} />
       </button>
 
       {reviewData.map((data, index) => {
-        return <SingleSlide key={data.id} {...data} />;
+        return (
+          <SingleSlide
+            key={data.id}
+            {...data}
+            personIndex={index}
+            currentPerson={currentPerson}
+          />
+        );
       })}
     </StyledUl>
   );

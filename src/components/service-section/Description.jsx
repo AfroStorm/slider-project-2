@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
 
   & .name {
     font-weight: 900;
-    color: var(--accent-1);
+    color: var(--text-2);
   }
 
   & .image {
@@ -27,7 +27,7 @@ const StyledDiv = styled.div`
     font-weight: 500;
     padding: 0.5rem;
     line-height: 2;
-    color: var(--primary);
+    color: var(--text-1);
   }
 `;
 

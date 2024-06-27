@@ -14,15 +14,15 @@ const StyledSection = styled.section`
   gap: 3rem;
   padding: 3rem 0;
 
-  & .background-image {
+  /* & .background-image {
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--secondary);
+    background: var(--accent-1);
     width: 100vw;
     height: 100%;
     z-index: -1;
-  }
+  } */
 
   & .content-container {
     display: flex;
@@ -33,7 +33,7 @@ const StyledSection = styled.section`
     gap: 3rem;
   }
   & .header .title {
-    color: var(--accent-1);
+    color: var(--secondary);
     font-weight: 900;
     text-align: center;
     font-size: 1.8rem;
@@ -51,7 +51,7 @@ const StyledSection = styled.section`
 const Service = forwardRef(({}, ref) => {
   return (
     <StyledSection ref={ref}>
-      <div className="background-image"></div>
+      {/* <div className="background-image"></div> */}
 
       <div className="content-container">
         <div className="header">

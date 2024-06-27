@@ -2,16 +2,25 @@ import styled from "styled-components";
 import { LiaStarSolid } from "react-icons/lia";
 
 const StyledLi = styled.li`
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 2rem 0;
+  border-radius: 0.5rem;
   gap: 1rem;
+  background: var(--secondary);
+  transition: 0.6s ease;
+  ${({ $currentPerson, $personIndex }) => `
+    transform: translateX(${100 * ($personIndex - $currentPerson)}%);
+    opacity: ${$personIndex === $currentPerson ? 1 : 0};
+    visibility: ${$personIndex === $currentPerson ? "visible" : "hidden"};
+  `}
 
   & .image-container {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     border-radius: 50%;
     overflow: hidden;
   }
@@ -59,9 +68,17 @@ const StyledLi = styled.li`
   }
 `;
 
-const SingleSlide = ({ image, userName, age, numOfStars, reviewText }) => {
+const SingleSlide = ({
+  image,
+  userName,
+  age,
+  numOfStars,
+  reviewText,
+  personIndex,
+  currentPerson,
+}) => {
   return (
-    <StyledLi>
+    <StyledLi $currentPerson={currentPerson} $personIndex={personIndex}>
       <div className="image-container">
         <img src={image} alt={userName} className="image" />
       </div>
