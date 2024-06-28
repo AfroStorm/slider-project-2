@@ -25,14 +25,16 @@ const StyledUl = styled.ul`
   }
 `;
 
-const PageLinks = ({ pageLinks }) => {
+const PageLinks = ({ pageLinks, handlePage }) => {
   return (
     <StyledUl>
-      {pageLinks.map((pageLink) => {
+      {pageLinks.map((pageLink, index) => {
         const { id, name } = pageLink;
         return (
           <li key={id} className="page-link">
-            <button type="button">{name}</button>
+            <button type="button" onClick={() => handlePage(index)}>
+              {name}
+            </button>
           </li>
         );
       })}

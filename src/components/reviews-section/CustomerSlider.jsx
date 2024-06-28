@@ -6,7 +6,8 @@ import { useState } from "react";
 const StyledUl = styled.ul`
   position: relative;
   width: 90vw;
-  height: 40rem;
+  max-width: 40rem;
+  height: 38rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,11 +24,13 @@ const StyledUl = styled.ul`
     border: none;
     background: transparent;
     z-index: 99;
+    cursor: pointer;
   }
 
   & .arrow-btn.left-btn {
     left: 0;
   }
+
   & .arrow-btn.right-btn {
     right: 0;
   }
@@ -35,6 +38,23 @@ const StyledUl = styled.ul`
   & .arrow-icon {
     font-size: 2rem;
     color: var(--accent-1);
+    transition: 0.3s ease;
+  }
+
+  & .arrow-icon:hover,
+  .arrow-icon:active {
+    scale: 1.2;
+    color: var(--primary);
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 20rem;
+    align-self: center;
+    margin-top: 4rem;
+
+    .arrow-btn {
+      top: 8rem;
+    }
   }
 `;
 

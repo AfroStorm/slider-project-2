@@ -11,7 +11,6 @@ const StyledSection = styled.section`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  padding: 3rem 0;
 
   & .content-container {
     display: flex;
@@ -27,12 +26,15 @@ const StyledSection = styled.section`
     font-weight: 900;
     text-align: center;
     font-size: 1.8rem;
+    margin-top: 3rem;
   }
 
   @media screen and (min-width: 992px) {
     position: absolute;
     top: 0;
     left: 0;
+    gap: 0;
+    margin-top: 2rem;
     transition: 0.3s ease;
     ${({ $currentPage, $pageIndex }) => `
     transform: translateX(${100 * ($pageIndex - $currentPage)}%);
@@ -46,21 +48,17 @@ const StyledSection = styled.section`
       flex-direction: row;
       gap: 0;
     }
-
-    & .header .title {
-      display: none;
-    }
   }
 `;
 
 const Service = forwardRef(({ currentPage, pageIndex }, ref) => {
   return (
     <StyledSection ref={ref} $currentPage={currentPage} $pageIndex={pageIndex}>
-      <div className="content-container">
-        <div className="header">
-          <h4 className="title">our services for you</h4>
-        </div>
+      <div className="header">
+        <h4 className="title">our services for you</h4>
+      </div>
 
+      <div className="content-container">
         {serviceData.map((service) => {
           const { id, name, image, features } = service;
           return (

@@ -7,6 +7,7 @@ const StyledLi = styled.li`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 15rem;
   padding: 2rem 0;
   border-radius: 0.5rem;
   gap: 1rem;
@@ -33,8 +34,9 @@ const StyledLi = styled.li`
 
   & .stars {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 0.5rem;
     gap: 0.7rem;
   }
 
@@ -66,6 +68,36 @@ const StyledLi = styled.li`
     font-weight: 500;
     color: var(--accent-1);
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 1rem 2rem;
+    flex-direction: row;
+
+    .content-container {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stars {
+      justify-content: flex-start;
+    }
+
+    & .star-icon {
+      font-size: 1.3rem;
+    }
+
+    .review-text {
+      font-size: 1rem;
+    }
+
+    .age,
+    .name {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--accent-1);
+    }
+  }
 `;
 
 const SingleSlide = ({
@@ -82,18 +114,19 @@ const SingleSlide = ({
       <div className="image-container">
         <img src={image} alt={userName} className="image" />
       </div>
+      <div className="content-container">
+        <div className="stars">
+          {Array.from({ length: numOfStars }, (_, index) => {
+            return <LiaStarSolid key={index} className="star-icon" />;
+          })}
+        </div>
 
-      <div className="stars">
-        {Array.from({ length: numOfStars }, (_, index) => {
-          return <LiaStarSolid key={index} className="star-icon" />;
-        })}
-      </div>
+        <p className="review-text">{reviewText}</p>
 
-      <p className="review-text">{reviewText}</p>
-
-      <div className="user-info">
-        <h4 className="name">{userName}</h4>
-        <h4 className="age">{age}</h4>
+        <div className="user-info">
+          <h4 className="name">{userName}</h4>
+          <h4 className="age">{age}</h4>
+        </div>
       </div>
     </StyledLi>
   );

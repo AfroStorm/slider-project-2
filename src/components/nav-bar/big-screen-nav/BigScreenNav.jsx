@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
   box-shadow: var(--light-shadow);
 `;
 
-const BigScreenNav = ({ pageLinks, socialLinks }) => {
+const BigScreenNav = ({ pageLinks, socialLinks, handlePage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -42,7 +42,7 @@ const BigScreenNav = ({ pageLinks, socialLinks }) => {
         isOpen={isOpen}
         handleSocialLinks={handleSocialLinks}
       />
-      <PageLinks pageLinks={pageLinks} />
+      <PageLinks pageLinks={pageLinks} handlePage={handlePage} />
     </StyledDiv>
   );
 };

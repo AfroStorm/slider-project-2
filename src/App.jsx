@@ -63,6 +63,10 @@ function App() {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
+  const handlePage = (pageIndex) => {
+    setCurrentPge(pageIndex);
+  };
+
   // Function to update the state with the current window width
   const updateWindowWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -85,6 +89,7 @@ function App() {
         pageLinks={pageLinks}
         socialLinks={socialLinks}
         handleMobileNav={handleMobileNav}
+        handlePage={handlePage}
       />
 
       <MobileNav
@@ -95,19 +100,19 @@ function App() {
         scrollToSection={scrollToSection}
       />
 
-      {/* <Home ref={homeSectionRef} currentPage={currentPage} pageIndex={0} /> */}
-      {/* <About ref={aboutSectionRef} currentPage={currentPage} pageIndex={1} /> */}
+      <Home ref={homeSectionRef} currentPage={currentPage} pageIndex={0} />
+      <About ref={aboutSectionRef} currentPage={currentPage} pageIndex={1} />
       <Service
         ref={serviceSectionRef}
         currentPage={currentPage}
-        pageIndex={0}
+        pageIndex={2}
       />
-      {/* <WhyUs ref={whyUsSectionRef} currentPage={currentPage} pageIndex={3} /> */}
-      {/* <Reviews
+      <WhyUs ref={whyUsSectionRef} currentPage={currentPage} pageIndex={3} />
+      <Reviews
         ref={reviewsSectionRef}
         currentPage={currentPage}
         pageIndex={4}
-      /> */}
+      />
     </StyledMain>
   );
 }

@@ -15,12 +15,22 @@ const StyledDiv = styled.div`
   z-index: 99;
 `;
 
-const NavBar = ({ windowWidth, pageLinks, socialLinks, handleMobileNav }) => {
+const NavBar = ({
+  windowWidth,
+  pageLinks,
+  socialLinks,
+  handleMobileNav,
+  handlePage,
+}) => {
   return (
     <StyledDiv>
       <Logo />
       {windowWidth >= 992 ? (
-        <BigScreenNav pageLinks={pageLinks} socialLinks={socialLinks} />
+        <BigScreenNav
+          pageLinks={pageLinks}
+          socialLinks={socialLinks}
+          handlePage={handlePage}
+        />
       ) : (
         <HamburgerMenu handleMobileNav={handleMobileNav} />
       )}

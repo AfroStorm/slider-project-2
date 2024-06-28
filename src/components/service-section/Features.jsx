@@ -40,7 +40,6 @@ const StyledUl = styled.ul`
   & .feature-text {
     font-size: 1.2rem;
     font-weight: 900;
-    flex: 10;
     color: var(--secondary);
   }
 
@@ -48,8 +47,8 @@ const StyledUl = styled.ul`
     align-items: center;
 
     .image {
-      width: 21rem;
-      height: 16rem;
+      width: 18rem;
+      height: 14rem;
     }
     .feature {
       align-self: flex-start;
